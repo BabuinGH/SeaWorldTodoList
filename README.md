@@ -20,6 +20,6 @@ The following **optional** features are implemented:
 * [ ] Use a [DialogFragment](http://guides.codepath.com/android/Using-DialogFragment) instead of new Activity for editing items
 * [ ] Tweak the style improving the UI / UX, play with colors, images or backgrounds
 
-
-GIF created with [LiceCap](https://github.com/BabuinGH/SeaWorldTodoList/blob/master/SeaWorldTodoList.gif).
+# SeaWorld Todo List
+![LiceCap](SeaWorldTodoList.gif).
 
