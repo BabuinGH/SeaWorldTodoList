@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.codepath.SeaWorldTodo">
+    package="com.codepath.seaworldtodo">
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/seaworld_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.codepath.SeaWorldTodo.SplashScreenActivity"
+            android:name="com.codepath.seaworldtodo.activities.SplashScreenActivity"
             android:theme="@style/SplashTheme"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -18,9 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.codepath.SeaWorldTodo.EditItemActivity" />
+        <activity android:name="com.codepath.seaworldtodo.activities.EditItemActivity" />
         <activity
-            android:name="com.codepath.SeaWorldTodo.MainActivity"
+            android:name="com.codepath.seaworldtodo.activities.MainActivity"
             android:icon="@drawable/seaworld_splash"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />

@@ -1,4 +1,4 @@
-package com.codepath.SeaWorldTodo;
+package com.codepath.seaworldtodo.activities;
 
 import android.content.Intent;
 import android.os.Bundle;

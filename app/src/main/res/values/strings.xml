@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">"SeaWorld\nTodoList"</string>
+
+    <string-array name="Shows">
+        <item>Abby\'s Star Spin</item>
+        <item>Bayside Skyride</item>
+        <item>Chinese Acrobats</item>
+        <item>Dolphin Days</item>
+        <item>Elmo\'s Flying Fish</item>
+        <item>Journey to Atlantis</item>
+        <item>Killer Whale Show</item>
+        <item>Manta</item>
+        <item>Ocean Explorer</item>
+        <item>Oscar\'s Rocking Eel</item>
+        <item>Pets Rule</item>
+        <item>Riptide Rescue</item>
+        <item>Sea Lions Live</item>
+        <item>Shipwreck Rapids</item>
+        <item>Skytower</item>
+        <item>Wild Arctic Ride</item>
+    </string-array>
+
 </resources>

@@ -1,4 +1,4 @@
-package com.codepath.SeaWorldTodo;
+package com.codepath.seaworldtodo;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

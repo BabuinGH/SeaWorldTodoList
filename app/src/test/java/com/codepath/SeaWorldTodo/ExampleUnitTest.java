@@ -1,4 +1,4 @@
-package com.codepath.SeaWorldTodo;
+package com.codepath.seaworldtodo;
 
 import org.junit.Test;
 
