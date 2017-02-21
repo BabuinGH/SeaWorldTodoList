@@ -21,8 +21,5 @@ The following **optional** features are implemented:
 * [ ] Tweak the style improving the UI / UX, play with colors, images or backgrounds
 
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+GIF created with [LiceCap](https://github.com/BabuinGH/SeaWorldTodoList/blob/master/SeaWorldTodoList.gif).
 
-## Notes
-
-Describe any challenges encountered while building the app.
