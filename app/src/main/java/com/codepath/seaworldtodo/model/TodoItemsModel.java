@@ -1,18 +1,29 @@
 package com.codepath.seaworldtodo.model;
 
+import com.codepath.seaworldtodo.database.TodoItemDbHelper;
+import com.raizlabs.android.dbflow.annotation.Column;
+import com.raizlabs.android.dbflow.annotation.PrimaryKey;
+import com.raizlabs.android.dbflow.annotation.Table;
+import com.raizlabs.android.dbflow.structure.BaseModel;
+
 /**
  * Created by babs on 2/20/17.
  */
-
-public class TodoItemsModel {
+@Table(database = TodoItemDbHelper.class)
+public class TodoItemsModel extends BaseModel{
+    @Column
+    @PrimaryKey
     public String showName;
+
+    @Column
     public String showTime;
 
-    //Constructor
-    public TodoItemsModel(String name, String time) {
-        this.showName = name;
-        this.showTime = time;
-    }
+//    //Constructor
+//    public TodoItemsModel(String name, String time) {
+//        super();
+//        this.showName = name;
+//        this.showTime = time;
+//    }
 
     //Getters and Setters
     public String getShowName() {

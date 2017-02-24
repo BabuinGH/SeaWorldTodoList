@@ -65,7 +65,11 @@ public class CreateTodoItemActivity extends AppCompatActivity {
             selectedTime = data.getExtras().getString("time");
 
             //add the shows to arraylist
-            arrayOfShows.add(new TodoItemsModel(selectedShow, selectedTime));
+            TodoItemsModel addItems = new TodoItemsModel();
+            addItems.setShowName(selectedShow);
+            addItems.setShowTime(selectedTime);
+            addItems.save();
+//            arrayOfShows.add(new TodoItemsModel(selectedShow, selectedTime));
             adapter.notifyDataSetChanged();
         }
 

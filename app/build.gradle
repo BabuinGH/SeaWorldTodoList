@@ -1,5 +1,8 @@
 apply plugin: 'com.android.application'
 
+// define DBFlow version
+def dbflow_version = "4.0.0-beta5"
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
@@ -26,5 +29,10 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'commons-io:commons-io:2.4'
+
+    annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
+    compile "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
+    compile "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
+
     testCompile 'junit:junit:4.12'
 }
