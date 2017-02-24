@@ -12,19 +12,19 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.codepath.seaworldtodo.R;
-import com.codepath.seaworldtodo.model.ShowModel;
-import com.codepath.seaworldtodo.adapter.showAdapter;
+import com.codepath.seaworldtodo.model.TodoItemsModel;
+import com.codepath.seaworldtodo.adapter.TodoItemsAdapter;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
-    ArrayList<ShowModel> arrayOfShows;
-    showAdapter adapter;
+public class CreateTodoItemActivity extends AppCompatActivity {
+    ArrayList<TodoItemsModel> arrayOfShows;
+    TodoItemsAdapter adapter;
     ListView lvItems;
     private final int REQUEST_CODE = 1;
     public String selectedShow;
     public String selectedTime;
-    public static int deleteposition;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         arrayOfShows = new ArrayList<>();
-        adapter = new showAdapter(this,arrayOfShows);
+        adapter = new TodoItemsAdapter(this,arrayOfShows);
 
         //Attach listView with adapter
         lvItems = (ListView)findViewById(R.id.lvItems);
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             selectedTime = data.getExtras().getString("time");
 
             //add the shows to arraylist
-            arrayOfShows.add(new ShowModel(selectedShow, selectedTime));
+            arrayOfShows.add(new TodoItemsModel(selectedShow, selectedTime));
             adapter.notifyDataSetChanged();
         }
 

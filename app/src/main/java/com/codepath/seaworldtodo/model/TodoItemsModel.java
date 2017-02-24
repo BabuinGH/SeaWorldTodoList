@@ -4,12 +4,12 @@ package com.codepath.seaworldtodo.model;
  * Created by babs on 2/20/17.
  */
 
-public class ShowModel {
+public class TodoItemsModel {
     public String showName;
     public String showTime;
 
     //Constructor
-    public ShowModel(String name, String time) {
+    public TodoItemsModel(String name, String time) {
         this.showName = name;
         this.showTime = time;
     }

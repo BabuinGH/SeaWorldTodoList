@@ -10,14 +10,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 
 import com.codepath.seaworldtodo.R;
 
 public class EditItemActivity extends AppCompatActivity {
-    private EditText etEditItem;
     private Spinner spShows;
     private TimePicker timePicker1;
     public static String selectedShow;
@@ -83,7 +81,6 @@ public class EditItemActivity extends AppCompatActivity {
         int hour = timePicker1.getCurrentHour();
         int min = timePicker1.getCurrentMinute();
         time =  showTime(hour, min);
-        //time = (hour + ':' + min);
 
         Intent returnIntent = new Intent();
         returnIntent.putExtra("selectedShow",selectedShow);
