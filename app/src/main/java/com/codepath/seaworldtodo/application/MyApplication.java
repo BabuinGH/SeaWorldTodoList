@@ -1,4 +1,4 @@
-package com.codepath.seaworldtodo;
+package com.codepath.seaworldtodo.application;
 
 import android.app.Application;
 

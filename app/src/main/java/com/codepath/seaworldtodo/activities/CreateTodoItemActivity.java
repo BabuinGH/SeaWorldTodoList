@@ -12,8 +12,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.codepath.seaworldtodo.R;
-import com.codepath.seaworldtodo.model.TodoItemsModel;
 import com.codepath.seaworldtodo.adapter.TodoItemsAdapter;
+import com.codepath.seaworldtodo.model.TodoItemsModel;
+import com.raizlabs.android.dbflow.sql.language.SQLite;
 
 import java.util.ArrayList;
 
@@ -35,27 +36,12 @@ public class CreateTodoItemActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         // Sets the Toolbar to act as the ActionBar for this Activity window.
-        // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);
 
         if(getSupportActionBar() != null){
             getSupportActionBar().setIcon(ResourcesCompat.getDrawable(getResources(), R.drawable.todo_list, null));
         }
 
-        arrayOfShows = new ArrayList<>();
-        adapter = new TodoItemsAdapter(this,arrayOfShows);
-
-        //Attach listView with adapter
-        lvItems = (ListView)findViewById(R.id.lvItems);
-        lvItems.setAdapter(adapter);
-        lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getApplicationContext(), EditItemActivity.class);
-                intent.putExtra("title", "Edit Item");
-                startActivity(intent);
-            }
-        });
     }
 
     @Override
@@ -69,8 +55,24 @@ public class CreateTodoItemActivity extends AppCompatActivity {
             addItems.setShowName(selectedShow);
             addItems.setShowTime(selectedTime);
             addItems.save();
-//            arrayOfShows.add(new TodoItemsModel(selectedShow, selectedTime));
+
+            arrayOfShows = (ArrayList<TodoItemsModel>) SQLite.select().
+                    from(TodoItemsModel.class).queryList();
+            adapter = new TodoItemsAdapter(this,arrayOfShows);
             adapter.notifyDataSetChanged();
+
+            //Attach listView with adapter
+            lvItems = (ListView)findViewById(R.id.lvItems);
+            lvItems.setAdapter(adapter);
+            lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Intent intent = new Intent(getApplicationContext(), EditItemActivity.class);
+                    intent.putExtra("title", "Edit Item");
+                    startActivity(intent);
+                }
+            });
+
         }
 
     }

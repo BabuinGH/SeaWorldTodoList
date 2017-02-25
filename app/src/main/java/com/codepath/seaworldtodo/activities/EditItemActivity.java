@@ -14,6 +14,7 @@ import android.widget.Spinner;
 import android.widget.TimePicker;
 
 import com.codepath.seaworldtodo.R;
+import com.codepath.seaworldtodo.model.TodoItemsModel;
 
 public class EditItemActivity extends AppCompatActivity {
     private Spinner spShows;
@@ -115,6 +116,10 @@ public class EditItemActivity extends AppCompatActivity {
 
                     @Override
                     public void onClick(DialogInterface arg0, int arg1) {
+                        TodoItemsModel removeItems = new TodoItemsModel();
+                        removeItems.delete();
+                        Intent intent = new Intent(getApplicationContext(), CreateTodoItemActivity.class);
+                        startActivity(intent);
                     }
                 });
 

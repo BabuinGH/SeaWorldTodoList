@@ -18,13 +18,6 @@ public class TodoItemsModel extends BaseModel{
     @Column
     public String showTime;
 
-//    //Constructor
-//    public TodoItemsModel(String name, String time) {
-//        super();
-//        this.showName = name;
-//        this.showTime = time;
-//    }
-
     //Getters and Setters
     public String getShowName() {
         return showName;
