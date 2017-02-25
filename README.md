@@ -15,9 +15,8 @@ The following **required** functionality is completed:
 * [ ] User can **persist todo items** and retrieve them properly on app restart
 
 The following **optional** features are implemented:
-
+* [ ] Persist the todo items into SQLite instead of a text file using DBFlow
 * [ ] Improve style of the todo items in the list [using a custom adapter](http://guides.codepath.com/android/Using-an-ArrayAdapter-with-ListView)
-* [ ] Use a [DialogFragment](http://guides.codepath.com/android/Using-DialogFragment) instead of new Activity for editing items
 * [ ] Tweak the style improving the UI / UX, play with colors, images or backgrounds
 
 # SeaWorld Todo List
